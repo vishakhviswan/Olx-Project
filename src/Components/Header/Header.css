@@ -162,3 +162,13 @@
     display: none;
   }
 }
+.loginPage{
+  cursor: pointer;
+  font-weight: 700;
+}
+.logOut{
+  cursor: pointer;
+}
+.brandName{
+  cursor: pointer;
+}
