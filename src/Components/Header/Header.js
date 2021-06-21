@@ -8,6 +8,7 @@ import Arrow from '../../assets/Arrow';
 import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
 import { AuthContext, FirebaseContext } from '../../store/Context';
+import {Dropdown} from 'react-bootstrap'
 function Header() {
   const history = useHistory()
   const {user} = useContext(AuthContext)
@@ -47,12 +48,26 @@ function Header() {
           <hr />
          
         </div>
-        <div className="logOut">
-        {user && <span onClick={()=>{
+        <div className="dropDown">
+          <Dropdown >
+          <Dropdown.Toggle id="dropdown-basic" className="dropDownArrow"/>
+          
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">{user && <span>Hello, <br/> {user.displayName}<br/>{"view and edit profile"}<hr/></span> }</Dropdown.Item>
+            <Dropdown.Item onClick={()=>{
+          history.push('./myads')}}>My Ads</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Buy Business Packages</Dropdown.Item>
+            <Dropdown.Item href="#/action-4">Help</Dropdown.Item>
+            <Dropdown.Item href="#/action-5">settings</Dropdown.Item>
+            <Dropdown.Item href="#/action-6">Install OLX Lite App</Dropdown.Item>
+            <Dropdown.Item>{user && <span onClick={()=>{
           firebase.auth().signOut();
           history.push('/login')
-        }} > Logout</span>}
+        }} > Logout</span>}</Dropdown.Item>
+          </Dropdown.Menu>
+          </Dropdown>
         </div>
+        
         <div className="sellMenu">
           <SellButton></SellButton>
           <div className="sellMenuContent">

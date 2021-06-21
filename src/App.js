@@ -12,6 +12,7 @@ import Home from './Pages/Home';
 import Signuppage from './Pages/Signup';
 import Create from './Pages/Create';
 import ViewPost from './Pages/ViewPost';
+import Myads from './Pages/Myads';
 
 function App() {
   const {setUser} = useContext(AuthContext)
@@ -39,6 +40,9 @@ function App() {
         </Route>
         <Route path='/Post'>
           <ViewPost/>
+        </Route>
+        <Route path='/myads'>
+          <Myads/>
         </Route>
         
       </Router>

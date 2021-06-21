@@ -1,0 +1,20 @@
+.unlisted {
+    width: max-content;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .sellButton{
+    width: max-content;
+    padding: 10px;
+    position: absolute;
+    margin-top: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .simpleNav{
+     padding-top: 4em; 
+  }

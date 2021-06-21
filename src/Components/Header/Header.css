@@ -94,8 +94,7 @@
   margin-right: 5px;
 }
 
-.language svg {
-}
+
 
 .span {
   text-decoration: none;
@@ -171,4 +170,14 @@
 }
 .brandName{
   cursor: pointer;
+}
+.dropDownArrow{
+  background-color: whitesmoke;
+  border-color: whitesmoke;
+  color: black;
+  
+}
+.dropDownArrow:hover{
+  background-color: whitesmoke;
+  border-color: whitesmoke;
 }
